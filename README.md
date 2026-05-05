@@ -1,5 +1,8 @@
 # JSONL PPrint
 
+[![GitHub](https://img.shields.io/badge/GitHub-cal859%2Fjsonl--pprint--vscode-blue?logo=github)](https://github.com/cal859/jsonl-pprint-vscode)
+[![VS Marketplace](https://img.shields.io/visual-studio-marketplace/v/bbprod.jsonl-pprint?label=VS%20Marketplace&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=bbprod.jsonl-pprint)
+
 Pretty-print **JSONL** and **NDJSON** files in a side-by-side read-only preview — no source file modifications. Each row is expanded into indented JSON with full syntax highlighting, and the preview updates live as the file changes on disk.
 
 ## Features
@@ -28,9 +31,9 @@ The "custom rows" variant prompts you for a row count before opening.
 
 ## Configuration
 
-| Setting | Default | Description |
-|---|---|---|
-| `jsonlPprint.defaultPreviewRows` | `10` | Number of rows shown when using the standard preview command. |
+| Setting                          | Default | Description                                                   |
+| -------------------------------- | ------- | ------------------------------------------------------------- |
+| `jsonlPprint.defaultPreviewRows` | `10`    | Number of rows shown when using the standard preview command. |
 
 To change the default, open **Settings** (`Cmd+,` / `Ctrl+,`) and search for `jsonlPprint`, or add it directly to your `settings.json`:
 

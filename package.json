@@ -2,7 +2,7 @@
   "name": "jsonl-pprint",
   "displayName": "JSONL PPrint",
   "description": "Pretty-print JSONL and NDJSON files in a side-by-side read-only preview — no source file modifications. Each row is formatted as indented JSON with syntax highlighting, with configurable row limits and live updates as the file changes.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "bbprod",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -10,20 +10,38 @@
     "type": "git",
     "url": "https://github.com/cal859/jsonl-pprint-vscode"
   },
-  "keywords": ["jsonl", "ndjson", "json lines", "formatter", "preview"],
+  "keywords": [
+    "jsonl",
+    "ndjson",
+    "json lines",
+    "formatter",
+    "preview"
+  ],
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Formatters"],
+  "categories": [
+    "Formatters"
+  ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
         "id": "jsonl",
-        "aliases": ["JSONL", "JSON Lines", "NDJSON"],
-        "extensions": [".jsonl", ".ndjson"],
-        "mimetypes": ["application/x-ndjson", "application/jsonl"]
+        "aliases": [
+          "JSONL",
+          "JSON Lines",
+          "NDJSON"
+        ],
+        "extensions": [
+          ".jsonl",
+          ".ndjson"
+        ],
+        "mimetypes": [
+          "application/x-ndjson",
+          "application/jsonl"
+        ]
       }
     ],
     "commands": [
