@@ -1,0 +1,6 @@
+{"id":1,"name":"Alice","age":30,"active":true}
+{"id":2,"name":"Bob","age":null,"active":false,"tags":["admin","user"]}
+{"id":3,"name":"Charlie","address":{"street":"123 Main St","city":"Springfield","zip":"12345"},"scores":[95,87,100]}
+{"event":"login","timestamp":"2024-01-15T08:23:11Z","user_id":"u_abc123","metadata":{"ip":"192.168.1.1","browser":"Chrome"}}
+{"event":"purchase","timestamp":"2024-01-15T09:05:42Z","user_id":"u_xyz789","items":[{"sku":"ITEM-001","qty":2,"price":19.99},{"sku":"ITEM-002","qty":1,"price":5.49}],"total":45.47}
+{"level":"error","message":"Connection timeout","service":"api-gateway","trace_id":"t_00ff1234","retries":3}

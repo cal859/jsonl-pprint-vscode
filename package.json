@@ -1,0 +1,91 @@
+{
+  "name": "jsonl-pprint",
+  "displayName": "JSONL PPrint",
+  "description": "Pretty-print JSONL and NDJSON files in a side-by-side read-only preview — no source file modifications. Each row is formatted as indented JSON with syntax highlighting, with configurable row limits and live updates as the file changes.",
+  "version": "0.1.0",
+  "publisher": "bbprod",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cal859/jsonl-pprint-vscode"
+  },
+  "keywords": ["jsonl", "ndjson", "json lines", "formatter", "preview"],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Formatters"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "jsonl",
+        "aliases": ["JSONL", "JSON Lines", "NDJSON"],
+        "extensions": [".jsonl", ".ndjson"],
+        "mimetypes": ["application/x-ndjson", "application/jsonl"]
+      }
+    ],
+    "commands": [
+      {
+        "command": "jsonl-pprint.preview",
+        "title": "Preview JSONL",
+        "icon": "$(open-preview)",
+        "category": "JSONL"
+      },
+      {
+        "command": "jsonl-pprint.previewWithRows",
+        "title": "Preview JSONL (custom rows)",
+        "icon": "$(list-ordered)",
+        "category": "JSONL"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "jsonl-pprint.preview",
+          "when": "resourceExtname == .jsonl || resourceExtname == .ndjson",
+          "group": "navigation"
+        },
+        {
+          "command": "jsonl-pprint.previewWithRows",
+          "when": "resourceExtname == .jsonl || resourceExtname == .ndjson",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "jsonl-pprint.preview",
+          "when": "resourceExtname == .jsonl || resourceExtname == .ndjson",
+          "group": "1_modification"
+        },
+        {
+          "command": "jsonl-pprint.previewWithRows",
+          "when": "resourceExtname == .jsonl || resourceExtname == .ndjson",
+          "group": "1_modification"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "JSONL PPrint",
+      "properties": {
+        "jsonlPprint.defaultPreviewRows": {
+          "type": "number",
+          "default": 10,
+          "minimum": 1,
+          "description": "Number of rows to show in the JSONL preview by default."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0"
+  }
+}
